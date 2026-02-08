@@ -23,4 +23,4 @@ Yuansheng Ni*, Songcheng Cai*, Xiangchao Chen*, **Jiarong Liang**, Zhiheng Lyu, 
 ## Contact
 - Email: jiarongliangcs [at] gmail.com
 
-You can edit this page in `_pages/about.md`.
+<!-- You can edit this page in `_pages/about.md`. -->
