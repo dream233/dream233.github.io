@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-Hi, I'm Jiarong Liang. I’m currently at the University of Waterloo.
+Hi, I'm Jiarong Liang. I’m currently a Research Assistant at the University of Waterloo, advised by [Wenhu Chen](https://wenhuchen.github.io/).
 
 This website contains:
 - [Publications](/publications/)
