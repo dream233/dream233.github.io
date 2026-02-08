@@ -16,9 +16,11 @@ Hi, I'm Jiarong Liang. I’m currently a Research Assistant at the University of
 <!-- - (Add your interests here) -->
 
 ## Selected Publications
-**Jiarong Liang\***, Max Ku*, Ka-Hei Hui, Ping Nie, Wenhu Chen. **VisPhyWorld: Probing Physical Reasoning via Code-Driven Video Reconstruction** Under review ICML'26 [Code](https://github.com/TIGER-AI-Lab/VisPhyWorld) [HF](https://huggingface.co/collections/TIGER-Lab/visphyworld)
+**Jiarong Liang\***, Zhiheng Lyu*, Xiangchao Chen, Zijie Liu, Ping Nie, Yuyu Zhang, Wenhu Chen. **SWE-Next: Scalable Real-World Tasks for Software Engineering Agents** [\[Code\]](https://github.com/TIGER-AI-Lab/SWE-Next)
 
-Yuansheng Ni*, Songcheng Cai*, Xiangchao Chen*, **Jiarong Liang**, Zhiheng Lyu, Jiaqi Deng, Kai Zou, Ping Nie, Fei Yuan, Xiang Yue, Wenhu Chen. **VisCoder2: Building Multi-Language Visualization Coding Agents.** In ICLR’26 [Paper](https://arxiv.org/abs/2510.23642) [Project Page](https://tiger-ai-lab.github.io/VisCoder2/) [Code](https://github.com/TIGER-AI-Lab/VisCoder2) [HF](https://hf.co/collections/TIGER-Lab/viscoder2)
+**Jiarong Liang\***, Max Ku*, Ka-Hei Hui, Ping Nie, Wenhu Chen. **VisPhyWorld: Probing Physical Reasoning via Code-Driven Video Reconstruction** Under review ICML'26 [\[Code\]](https://github.com/TIGER-AI-Lab/VisPhyWorld) [\[HF\]](https://huggingface.co/collections/TIGER-Lab/visphyworld)
+
+Yuansheng Ni*, Songcheng Cai*, Xiangchao Chen*, **Jiarong Liang**, Zhiheng Lyu, Jiaqi Deng, Kai Zou, Ping Nie, Fei Yuan, Xiang Yue, Wenhu Chen. **VisCoder2: Building Multi-Language Visualization Coding Agents.** In ICLR’26 [\[Paper\]](https://arxiv.org/abs/2510.23642) [\[Project Page\]](https://tiger-ai-lab.github.io/VisCoder2/) [\[Code\]](https://github.com/TIGER-AI-Lab/VisCoder2) [\[HF\]](https://hf.co/collections/TIGER-Lab/viscoder2)
 
 ## Contact
 - Email: jiarongliangcs [at] gmail.com
