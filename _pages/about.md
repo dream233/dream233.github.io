@@ -7,7 +7,9 @@ redirect_from:
   - /about.html
 ---
 
-Hi, I'm Jiarong Liang. I’m currently a Research Assistant at the University of Waterloo, advised by [Wenhu Chen](https://wenhuchen.github.io/).
+Hi, I'm Jiarong Liang. I’m currently a Research Assistant at the University of Waterloo, advised by [Wenhu Chen](https://wenhuchen.github.io/), working on natural language processing (NLP) and large language models (LLMs).
+
+I completed my B.S. in Computer Science at South China University of Technology and my M.S. at Washington University in St. Louis.
 
 
 ## News
