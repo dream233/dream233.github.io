@@ -13,7 +13,7 @@ I completed my B.S. in Computer Science at South China University of Technology 
 
 
 ## News
-- 02/2026: Released [VisPhyWorld](https://github.com/TIGER-AI-Lab/VisPhyWorld): building multi-language visualization coding agents. Check out our paper and [huggingface collections](https://huggingface.co/collections/TIGER-Lab/visphyworld)!
+- 02/2026: Released [VisPhyWorld](https://github.com/TIGER-AI-Lab/VisPhyWorld): Probing Physical Reasoning via Code-Driven Video Reconstruction. Check out our paper and [huggingface collections](https://huggingface.co/collections/TIGER-Lab/visphyworld)!
 - 10/2025: Released [VisCoder2](https://tiger-ai-lab.github.io/VisCoder2/): building multi-language visualization coding agents. Check out our [paper](https://arxiv.org/abs/2510.23642) and [huggingface collections](https://hf.co/collections/TIGER-Lab/viscoder2)!
 <!-- - (Add your interests here) -->
 
