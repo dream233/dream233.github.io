@@ -267,10 +267,9 @@
         </a>
       {% endif %}
       {% if entry.code %}
-        <a href="{{ entry.code }}" rel="external nofollow noopener" target="_blank">
-          <img alt="Code" src="https://img.shields.io/badge/-Code-FFCC99?style=flat">
-        </a>
-
+        {% assign hide_code = entry.hide_code | default: '' | downcase %}
+        {% assign hide_stars = entry.hide_stars | default: '' | downcase %}
+        {% assign show_code = entry.show_code | default: '' | downcase %}
         {% assign github_owner = null %}
         {% assign github_repo = null %}
         {% if entry.code contains 'github.com/' %}
@@ -282,7 +281,28 @@
             {% assign github_repo = github_parts[1] %}
           {% endif %}
         {% endif %}
+
+        {% assign show_stars = false %}
         {% if github_owner and github_repo %}
+          {% if hide_stars != 'true' and hide_stars != '1' and hide_stars != 'yes' %}
+            {% assign show_stars = true %}
+          {% endif %}
+        {% endif %}
+
+        {% assign force_show_code = false %}
+        {% if show_code == 'true' or show_code == '1' or show_code == 'yes' %}
+          {% assign force_show_code = true %}
+        {% endif %}
+
+        {% if hide_code != 'true' and hide_code != '1' and hide_code != 'yes' %}
+          {% if show_stars == false or force_show_code %}
+            <a href="{{ entry.code }}" rel="external nofollow noopener" target="_blank">
+              <img alt="Code" src="https://img.shields.io/badge/-Code-FFCC99?style=flat">
+            </a>
+          {% endif %}
+        {% endif %}
+
+        {% if show_stars %}
           <a href="{{ entry.code }}" rel="external nofollow noopener" target="_blank">
             <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/{{ github_owner }}/{{ github_repo }}">
           </a>
