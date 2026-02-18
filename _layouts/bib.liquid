@@ -205,7 +205,11 @@
         </a>
       {% endif %}
       {% if entry.arxiv %}
-        <a href="http://arxiv.org/abs/{{ entry.arxiv }}" rel="external nofollow noopener" target="_blank">
+        {% assign arxiv_url = "https://arxiv.org/abs/" | append: entry.arxiv %}
+        {% if entry.arxiv_pdf %}
+          {% assign arxiv_url = entry.arxiv_pdf %}
+        {% endif %}
+        <a href="{{ arxiv_url }}" rel="external nofollow noopener" target="_blank">
           <img alt="arXiv" src="https://img.shields.io/badge/arXiv-b31b1b.svg?logo=arXiv">
         </a>
       {% endif %}
