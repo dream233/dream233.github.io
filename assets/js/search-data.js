@@ -29,6 +29,9 @@ ninja.data = [{
           section: "News",},{id: "news-released-visphyworld-probing-physical-reasoning-via-code-driven-video-reconstruction-check-out-our-paper-and-huggingface-collection",
           title: 'Released VisPhyWorld: Probing Physical Reasoning via Code-Driven Video Reconstruction. Check out our paper...',
           description: "",
+          section: "News",},{id: "news-released-swe-next-scalable-real-world-software-engineering-tasks-for-agents-check-out-our-paper-project-page-and-dataset",
+          title: 'Released SWE-Next: Scalable Real-World Software Engineering Tasks for Agents. Check out our paper,...',
+          description: "",
           section: "News",},{
         id: 'social-cv',
         title: 'CV',
