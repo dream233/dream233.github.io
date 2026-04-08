@@ -7,3 +7,11 @@
 
 "Vision":
   color: "#009f36"
+
+"arXiv":
+  url: https://arxiv.org
+  color: "#b31b1b"
+
+"ICLR":
+  url: https://iclr.cc
+  color: "#6c5ce7"

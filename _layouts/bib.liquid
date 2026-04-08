@@ -334,6 +334,17 @@
           </a>
         {% endif %}
       {% endif %}
+      {% if entry.linkedin %}
+        {% if entry.linkedin contains '://' %}
+          <a href="{{ entry.linkedin }}" rel="external nofollow noopener" target="_blank">
+            <img alt="LinkedIn post" src="https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat&logo=linkedin">
+          </a>
+        {% else %}
+          <a href="{{ entry.linkedin | relative_url }}">
+            <img alt="LinkedIn post" src="https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat&logo=linkedin">
+          </a>
+        {% endif %}
+      {% endif %}
       {% if entry.poster %}
         {% if entry.poster contains '://' %}
           <a href="{{ entry.poster }}" rel="external nofollow noopener" target="_blank">
