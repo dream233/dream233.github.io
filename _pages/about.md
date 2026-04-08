@@ -25,4 +25,4 @@ Hi, I'm Jiarong Liang. I’m currently a Research Assistant at the University of
 
 I completed my B.S. in Computer Science at South China University of Technology and my M.S. at Washington University in St. Louis.
 
-I am actively looking for PhD opportunities for 2026/2027, research collaborations, and internships in LLM/VLM-related areas. If you have interesting ideas or are interested in my research, feel free to reach out anytime.
+✨ I am actively looking for PhD opportunities for 2026/2027, research collaborations, and internships in LLM/VLM-related areas. If you have interesting ideas or are interested in my research, feel free to reach out anytime.
