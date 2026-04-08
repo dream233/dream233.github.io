@@ -61,6 +61,13 @@ ninja.data = [{
           window.open("https://www.linkedin.com/in/jiarong-liang-b2a8a5239", "_blank");
         },
       },{
+        id: 'social-x',
+        title: 'X',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://twitter.com/JLiang51825", "_blank");
+        },
+      },{
         id: 'social-rss',
         title: 'RSS Feed',
         section: 'Socials',
