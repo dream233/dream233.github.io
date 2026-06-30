@@ -32,6 +32,9 @@ ninja.data = [{
           section: "News",},{id: "news-released-swe-next-scalable-real-world-software-engineering-tasks-for-agents-check-out-our-paper-project-page-and-dataset",
           title: 'Released SWE-Next: Scalable Real-World Software Engineering Tasks for Agents. Check out our paper,...',
           description: "",
+          section: "News",},{id: "news-new-work-coming-soon-function-aware-fill-in-the-middle-as-mid-training-for-coding-agent-foundation-models-stay-tuned",
+          title: 'New work coming soon: Function-Aware Fill-in-the-Middle as Mid-Training for Coding Agent Foundation Models....',
+          description: "",
           section: "News",},{
         id: 'social-cv',
         title: 'CV',
