@@ -12,6 +12,9 @@
   url: https://arxiv.org
   color: "#b31b1b"
 
+"incoming":
+  color: "#6c757d"
+
 "ICLR":
   url: https://iclr.cc
   color: "#6c5ce7"
