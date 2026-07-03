@@ -1,5 +1,362 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Jiarong Liang (梁家榕) </title> <meta name="author" content="Jiarong Liang (梁家榕)"> <meta name="description" content="Stochastic Gradient Descent Life. "> <meta name="keywords" content="nlp, llms, machine-learning, jekyll, academic-website"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <link rel="stylesheet" href="/assets/css/bootstrap.min.css?v=a4b3f509e79c54a512b890d73235ef04"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="/assets/css/academicons.min.css?v=f0b7046b84e425c55f3463ac249818f5"> <link defer rel="stylesheet" href="/assets/css/scholar-icons.css?v=62b2ac103a88034e6882a5be5f3e2772"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="/assets/img/favicon.ico?v=7d846902dc7f016be6cc079833c8febf"> <link rel="stylesheet" href="/assets/css/main.css?v=d41d8cd98f00b204e9800998ecf8427e"> <link rel="canonical" href="https://dream233.github.io/"> <script src="/assets/js/theme.js?v=5fea5159b787642c1bbc1f334d60f883"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
-    initTheme();
-  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse text-right" id="navbarNav"> <ul class="navbar-nav ml-auto flex-nowrap"> <li class="nav-item active"> <a class="nav-link" href="/">About <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">CV </a> </li> <li class="nav-item"> <button id="search-toggle" title="Search" onclick="openSearchModal()"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" title="Change theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title"> <span class="font-weight-bold">Jiarong</span> Liang (梁家榕) </h1> <p class="desc">Research Assistant at the University of Waterloo</p> </header> <article> <div class="profile float-right"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/prof_pic-480.webp 480w,/assets/img/prof_pic-800.webp 800w,/assets/img/prof_pic-1400.webp 1400w," type="image/webp" sizes="(min-width: 930px) 270.0px, (min-width: 576px) 30vw, 95vw"> <img src="/assets/img/prof_pic.jpg?v=a17d7b703c677ccf9c5ca1fe1aeb46e5" class="img-fluid z-depth-1 rounded" width="100%" height="auto" alt="prof_pic.jpg" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"> </source></picture> </figure> </div> <div class="clearfix"> <p>Hi, I’m Jiarong Liang. I’m currently a Research Assistant at the University of Waterloo, advised by <a href="https://wenhuchen.github.io/" rel="external nofollow noopener" target="_blank">Wenhu Chen</a>, working on natural language processing (NLP) and large language models (LLMs).</p> <p>I completed my B.S. in Computer Science at South China University of Technology and my M.S. at Washington University in St. Louis.</p> <p>✨ I am actively looking for PhD opportunities for 2026/2027, research collaborations, and internships in LLM/VLM-related areas. If you have interesting ideas or are interested in my research, feel free to reach out anytime.</p> </div> <h2> <a href="/news/" style="color: inherit">news</a> </h2> <div class="news"> <div class="table-responsive"> <table class="table table-sm table-borderless"> <tr> <th scope="row" style="width: 20%">May 06, 2026</th> <td> New work coming soon: <strong>Function-Aware Fill-in-the-Middle as Mid-Training for Coding Agent Foundation Models</strong>. Stay tuned! </td> </tr> <tr> <th scope="row" style="width: 20%">Apr 07, 2026</th> <td> Released <a href="https://github.com/TIGER-AI-Lab/SWE-Next" rel="external nofollow noopener" target="_blank">SWE-Next</a>: Scalable Real-World Software Engineering Tasks for Agents. Check out our <a href="https://arxiv.org/abs/2603.20691" rel="external nofollow noopener" target="_blank">paper</a>, <a href="https://tiger-ai-lab.github.io/SWE-Next/" rel="external nofollow noopener" target="_blank">project page</a>, and <a href="https://huggingface.co/datasets/TIGER-Lab/SWE-Next" rel="external nofollow noopener" target="_blank">dataset</a>! </td> </tr> <tr> <th scope="row" style="width: 20%">Feb 08, 2026</th> <td> Released <a href="https://github.com/TIGER-AI-Lab/VisPhyWorld" rel="external nofollow noopener" target="_blank">VisPhyWorld</a>: Probing Physical Reasoning via Code-Driven Video Reconstruction. Check out our <a href="https://arxiv.org/pdf/2602.13294" rel="external nofollow noopener" target="_blank">paper</a> and <a href="https://huggingface.co/collections/TIGER-Lab/visphyworld" rel="external nofollow noopener" target="_blank">huggingface collection</a>! </td> </tr> <tr> <th scope="row" style="width: 20%">Oct 01, 2025</th> <td> Released <a href="https://tiger-ai-lab.github.io/VisCoder2/" rel="external nofollow noopener" target="_blank">VisCoder2</a>: building multi-language visualization coding agents. Check out our <a href="https://arxiv.org/abs/2510.23642" rel="external nofollow noopener" target="_blank">paper</a> and <a href="https://hf.co/collections/TIGER-Lab/viscoder2" rel="external nofollow noopener" target="_blank">huggingface collection</a>! </td> </tr> </table> </div> </div> <h2> <a href="/publications/" style="color: inherit">selected publications</a> </h2> <div class="publications"> <ol class="bibliography"> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100" style="background-color:#6c757d"> <div>incoming</div> </abbr> <figure> <picture> <img src="/assets/img/publication_preview/FIM.png" class="preview z-depth-1 rounded" width="100%" height="auto" alt="FIM.png" data-zoomable loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"> </picture> </figure> </div> <div id="wang2026fim" class="col-sm-8"> <div class="title">Function-Aware Fill-in-the-Middle as Mid-Training for Coding Agent Foundation Models</div> <div class="author"> Yubo Wang<sup>*</sup>, <em>Jiarong Liang<sup>*</sup></em>, Yuxuan Zhang, Xuye Liu, and <span class="more-authors" title="click to view 4 more authors" onclick=" var element=$(this); element.attr('title', ''); var more_authors_text=element.text() == '4 more authors' ? 'Cong Wei, Yuyu Zhang, Ping Nie, Wenhu Chen' : '4 more authors'; var cursorPosition=0; var textAdder=setInterval(function(){ element.html(more_authors_text.substring(0, cursorPosition + 1)); if (++cursorPosition == more_authors_text.length){ clearInterval(textAdder); } }, '10'); ">4 more authors</span> </div> <div class="periodical"> 2026 </div> <div class="periodical"> </div> <div class="links"> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100" style="background-color:#b31b1b"> <a href="https://arxiv.org" rel="external nofollow noopener" target="_blank">arXiv</a> </abbr> <figure> <picture> <img src="/assets/img/publication_preview/swenext.png" class="preview z-depth-1 rounded" width="100%" height="auto" alt="swenext.png" data-zoomable loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"> </picture> </figure> </div> <div id="liang2026swenext" class="col-sm-8"> <div class="title">SWE-Next: Scalable Real-World Software Engineering Tasks for Agents</div> <div class="author"> <em>Jiarong Liang<sup>*</sup></em>, Zhiheng Lyu<sup>*</sup>, Zijie Liu, Xiangchao Chen, and <span class="more-authors" title="click to view 3 more authors" onclick=" var element=$(this); element.attr('title', ''); var more_authors_text=element.text() == '3 more authors' ? 'Ping Nie, Kai Zou, Wenhu Chen' : '3 more authors'; var cursorPosition=0; var textAdder=setInterval(function(){ element.html(more_authors_text.substring(0, cursorPosition + 1)); if (++cursorPosition == more_authors_text.length){ clearInterval(textAdder); } }, '10'); ">3 more authors</span> </div> <div class="periodical"> 2026 </div> <div class="periodical"> </div> <div class="links"> <a href="https://arxiv.org/pdf/2603.20691" rel="external nofollow noopener" target="_blank"> <img alt="arXiv" src="https://img.shields.io/badge/arXiv-b31b1b.svg?logo=arXiv"> </a> <a href="https://tiger-ai-lab.github.io/SWE-Next/" rel="external nofollow noopener" target="_blank"> <img alt="Website" src="https://img.shields.io/badge/-Website-FFCC99?style=flat"> </a> <a href="https://github.com/TIGER-AI-Lab/SWE-Next" rel="external nofollow noopener" target="_blank"> <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/TIGER-AI-Lab/SWE-Next"> </a> <a href="https://huggingface.co/collections/TIGER-Lab/swe-next" rel="external nofollow noopener" target="_blank"> <img alt="Huggingface" src="https://img.shields.io/badge/-%F0%9F%A4%97%20Huggingface-red?style=flat"> </a> <a href="https://x.com/JLiang51825/status/2041620766605586546" rel="external nofollow noopener" target="_blank"> <img alt="X (formerly Twitter) URL" src="https://img.shields.io/badge/-Tweet-1DA1F2?style=flat&amp;logo=x"> </a> <a href="https://www.linkedin.com/posts/jiarong-liang-b2a8a5239_introducing-swe-next-a-scalable-execution-grounded-ugcPost-7447393376615747584-GYB3?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAADtmAhIBxJG5Rd1BWRGDRKRTUZMXk6AqR9o" rel="external nofollow noopener" target="_blank"> <img alt="LinkedIn post" src="https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat&amp;logo=linkedin"> </a> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100" style="background-color:#b31b1b"> <a href="https://arxiv.org" rel="external nofollow noopener" target="_blank">arXiv</a> </abbr> <figure> <picture> <img src="/assets/img/publication_preview/visphyworld.jpeg" class="preview z-depth-1 rounded" width="100%" height="auto" alt="visphyworld.jpeg" data-zoomable loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"> </picture> </figure> </div> <div id="liang2026visphyworldprobingphysicalreasoning" class="col-sm-8"> <div class="title">VisPhyWorld: Probing Physical Reasoning via Code-Driven Video Reconstruction</div> <div class="author"> <em>Jiarong Liang<sup>*</sup></em>, Max Ku<sup>*</sup>, Ka-Hei Hui, Ping Nie, and <span class="more-authors" title="click to view 1 more author" onclick=" var element=$(this); element.attr('title', ''); var more_authors_text=element.text() == '1 more author' ? 'Wenhu Chen' : '1 more author'; var cursorPosition=0; var textAdder=setInterval(function(){ element.html(more_authors_text.substring(0, cursorPosition + 1)); if (++cursorPosition == more_authors_text.length){ clearInterval(textAdder); } }, '10'); ">1 more author</span> </div> <div class="periodical"> 2026 </div> <div class="periodical"> </div> <div class="links"> <a href="https://arxiv.org/pdf/2602.13294" rel="external nofollow noopener" target="_blank"> <img alt="arXiv" src="https://img.shields.io/badge/arXiv-b31b1b.svg?logo=arXiv"> </a> <a href="https://tiger-ai-lab.github.io/VisPhyWorld/" rel="external nofollow noopener" target="_blank"> <img alt="Website" src="https://img.shields.io/badge/-Website-FFCC99?style=flat"> </a> <a href="https://github.com/TIGER-AI-Lab/VisPhyWorld" rel="external nofollow noopener" target="_blank"> <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/TIGER-AI-Lab/VisPhyWorld"> </a> <a href="https://huggingface.co/collections/TIGER-Lab/visphyworld" rel="external nofollow noopener" target="_blank"> <img alt="Huggingface" src="https://img.shields.io/badge/-%F0%9F%A4%97%20Huggingface-red?style=flat"> </a> <a href="https://x.com/JLiang51825/status/2024392655229096298" rel="external nofollow noopener" target="_blank"> <img alt="X (formerly Twitter) URL" src="https://img.shields.io/badge/-Tweet-1DA1F2?style=flat&amp;logo=x"> </a> <a href="https://www.linkedin.com/posts/jiarong-liang-b2a8a5239_im-excited-to-share-our-recent-work-share-7430007464370003968-oiVR?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAADtmAhIBxJG5Rd1BWRGDRKRTUZMXk6AqR9o" rel="external nofollow noopener" target="_blank"> <img alt="LinkedIn post" src="https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat&amp;logo=linkedin"> </a> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100" style="background-color:#6c5ce7"> <a href="https://iclr.cc/Conferences/2026" rel="external nofollow noopener" target="_blank">ICLR 2026</a> </abbr> <figure> <picture> <img src="/assets/img/publication_preview/viscoder2.png" class="preview z-depth-1 rounded" width="100%" height="auto" alt="viscoder2.png" data-zoomable loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"> </picture> </figure> </div> <div id="ni2026viscoder2" class="col-sm-8"> <div class="title">VisCoder2: Building Multi-Language Visualization Coding Agents</div> <div class="author"> Yuansheng Ni<sup>*</sup>, Songcheng Cai<sup>*</sup>, Xiangchao Chen<sup>*</sup>, <em>Jiarong Liang</em>, and <span class="more-authors" title="click to view 7 more authors" onclick=" var element=$(this); element.attr('title', ''); var more_authors_text=element.text() == '7 more authors' ? 'Zhiheng Lyu, Jiaqi Deng, Kai Zou, Ping Nie, Fei Yuan, Xiang Yue, Wenhu Chen' : '7 more authors'; var cursorPosition=0; var textAdder=setInterval(function(){ element.html(more_authors_text.substring(0, cursorPosition + 1)); if (++cursorPosition == more_authors_text.length){ clearInterval(textAdder); } }, '10'); ">7 more authors</span> </div> <div class="periodical"> <em>In International Conference on Learning Representations (ICLR)</em>, 2026 </div> <div class="periodical"> </div> <div class="links"> <a href="https://arxiv.org/abs/2510.23642" rel="external nofollow noopener" target="_blank"> <img alt="arXiv" src="https://img.shields.io/badge/arXiv-b31b1b.svg?logo=arXiv"> </a> <a href="https://tiger-ai-lab.github.io/VisCoder2/" rel="external nofollow noopener" target="_blank"> <img alt="Website" src="https://img.shields.io/badge/-Website-FFCC99?style=flat"> </a> <a href="https://github.com/TIGER-AI-Lab/VisCoder2" rel="external nofollow noopener" target="_blank"> <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/TIGER-AI-Lab/VisCoder2"> </a> <a href="https://hf.co/collections/TIGER-Lab/viscoder2" rel="external nofollow noopener" target="_blank"> <img alt="Huggingface" src="https://img.shields.io/badge/-%F0%9F%A4%97%20Huggingface-red?style=flat"> </a> </div> </div> </div> </li> </ol> </div> <div class="social"> <div class="contact-icons"> <a href="/assets/pdf/cv.pdf" title="Cv pdf"><i class="ai ai-cv"></i></a> <a href="mailto:jiarongliangcs@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a> <a href="https://github.com/dream233" title="Github username" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-github"></i></a> <a href="https://www.linkedin.com/in/jiarong-liang-b2a8a5239" title="Linkedin username" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-linkedin"></i></a> <a href="https://twitter.com/JLiang51825" title="X username" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-x-twitter"></i></a> <a href="/feed.xml" title="Rss icon"><i class="fa-solid fa-square-rss"></i></a> <a href="https://scholar.google.com/citations?user=hMkv3WEAAAAJ" title="Scholar userid" rel="external nofollow noopener" target="_blank"><i class="ai ai-google-scholar"></i></a> </div> <div class="contact-note">Email is the best way to reach me. </div> </div> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Jiarong Liang (梁家榕). Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>. </div> </footer> <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> <script src="/assets/js/bootstrap.bundle.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=a0db7e5d5c70cc3252b3138b0c91dcaf" type="text/javascript"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/js/zoom.js?v=85ddb88934d28b74e78031fd54cf8308"></script> <script src="/assets/js/no_defer.js?v=2781658a0a2b13ed609542042a859126"></script> <script defer src="/assets/js/common.js?v=c15de51d4bb57887caa2c21988d97279"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=d9f17b6adc2311cbabd747f4538bb15f"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/js/mathjax-setup.js?v=a5bb4e6a542c546dd929b24b8b236dfd"></script> <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script> <script defer src="/assets/js/progress-bar.js?v=2f30e0e6801ea8f5036fa66e1ab0a71a" type="text/javascript"></script> <script src="/assets/js/vanilla-back-to-top.min.js?v=f40d453793ff4f64e238e420181a1d17"></script> <script>
-    addBackToTop();
-  </script> <script type="module" src="/assets/js/search/ninja-keys.min.js?v=a3446f084dcaecc5f75aa1757d087dcf"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/js/search-setup.js?v=6c304f7b1992d4b60f7a07956e52f04a"></script> <script src="/assets/js/search-data.js"></script> <script src="/assets/js/shortcut-key.js?v=ccc841c459bfc0e64c1c2b5acd10df02"></script> </body> </html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <title>Jiarong Liang (梁家榕)</title>
+    <meta name="description" content="Jiarong Liang (梁家榕) is a Research Assistant at the University of Waterloo, working on natural language processing and large language models." />
+    <meta property="og:title" content="Jiarong Liang (梁家榕)" />
+    <meta property="og:description" content="Jiarong Liang (梁家榕) is a Research Assistant at the University of Waterloo, working on natural language processing and large language models." />
+    <meta property="og:image" content="https://dream233.github.io/assets/img/prof_pic.jpg" />
+    <meta property="og:url" content="https://dream233.github.io/" />
+    <link rel="canonical" href="https://dream233.github.io/" />
+    <link rel="icon" href="/assets/img/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <script>
+      // 在页面渲染前恢复上次选择的主题，避免明暗闪烁
+      (function () {
+        var theme = localStorage.getItem("theme");
+        if (!theme) theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="site-name" href="/">Jiarong Liang</a>
+        <nav class="site-nav" aria-label="Main navigation">
+          
+            <a href="/" class="active" aria-current="page">About</a>
+          
+            <a href="/publications/" >Publications</a>
+          
+            <a href="/news/" >News</a>
+          
+            <a href="/cv/" >CV</a>
+          
+          <button id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+            <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+            <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5" />
+              <path d="M12 1v3M12 20v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M1 12h3M20 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12" />
+            </svg>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section class="hero">
+  <div class="hero-text">
+    <h1 class="hero-name">
+      Jiarong Liang <span class="hero-name-cn">梁家榕</span>
+    </h1>
+    <p class="hero-position">Research Assistant · University of Waterloo</p>
+    
+<div class="socials">
+  
+    <a
+      class="social-link"
+      href="mailto:jiarongliangcs@gmail.com"
+      title="Email"
+      aria-label="Email"
+      
+    >
+      
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        
+    </a>
+  
+    <a
+      class="social-link"
+      href="https://scholar.google.com/citations?user=hMkv3WEAAAAJ"
+      title="Google Scholar"
+      aria-label="Google Scholar"
+      target="_blank" rel="noopener"
+    >
+      
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M5.242 13.769 0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.749-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
+        
+    </a>
+  
+    <a
+      class="social-link"
+      href="https://github.com/dream233"
+      title="GitHub"
+      aria-label="GitHub"
+      target="_blank" rel="noopener"
+    >
+      
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        
+    </a>
+  
+    <a
+      class="social-link"
+      href="https://www.linkedin.com/in/jiarong-liang-b2a8a5239"
+      title="LinkedIn"
+      aria-label="LinkedIn"
+      target="_blank" rel="noopener"
+    >
+      
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        
+    </a>
+  
+    <a
+      class="social-link"
+      href="https://x.com/JLiang51825"
+      title="X (Twitter)"
+      aria-label="X (Twitter)"
+      target="_blank" rel="noopener"
+    >
+      
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+      
+    </a>
+  
+</div>
+
+  </div>
+  <img
+    class="hero-photo"
+    src="/assets/img/prof_pic.jpg"
+    alt="Portrait of Jiarong Liang"
+    width="152"
+    height="152"
+  />
+</section>
+
+<div class="bio">
+  <p>Hi, I’m <strong>Jiarong Liang</strong>. I’m currently a Research Assistant at the <a href="https://uwaterloo.ca/">University of Waterloo</a>, advised by <a href="https://wenhuchen.github.io/">Wenhu Chen</a>, working on natural language processing (NLP) and large language models (LLMs).</p>
+
+<p>I completed my B.S. in Computer Science at South China University of Technology and my M.S. at Washington University in St. Louis.</p>
+
+<div class="callout">
+✨ I am actively looking for <strong>PhD opportunities for 2026/2027</strong>, research collaborations, and internships in LLM/VLM-related areas. If you have interesting ideas or are interested in my research, feel free to reach out anytime.
+</div>
+
+</div>
+
+<section class="home-section">
+  <div class="section-head">
+    <h2>News</h2>
+    <a class="section-more" href="/news/">All news →</a>
+  </div>
+  
+
+
+<ul class="news-list">
+  
+    <li class="news-item">
+      <time class="news-date" datetime="2026-05-06">May 06, 2026</time>
+      <div class="news-text"><p>New work coming soon: <strong>Function-Aware Fill-in-the-Middle as Mid-Training for Coding Agent Foundation Models</strong>. Stay tuned!</p>
+</div>
+    </li>
+  
+    <li class="news-item">
+      <time class="news-date" datetime="2026-04-07">Apr 07, 2026</time>
+      <div class="news-text"><p>Released <a href="https://github.com/TIGER-AI-Lab/SWE-Next">SWE-Next</a>: Scalable Real-World Software Engineering Tasks for Agents. Check out our <a href="https://arxiv.org/abs/2603.20691">paper</a>, <a href="https://tiger-ai-lab.github.io/SWE-Next/">project page</a>, and <a href="https://huggingface.co/datasets/TIGER-Lab/SWE-Next">dataset</a>!</p>
+</div>
+    </li>
+  
+    <li class="news-item">
+      <time class="news-date" datetime="2026-02-08">Feb 08, 2026</time>
+      <div class="news-text"><p>Released <a href="https://github.com/TIGER-AI-Lab/VisPhyWorld">VisPhyWorld</a>: Probing Physical Reasoning via Code-Driven Video Reconstruction. Check out our <a href="https://arxiv.org/pdf/2602.13294">paper</a> and <a href="https://huggingface.co/collections/TIGER-Lab/visphyworld">huggingface collection</a>!</p>
+</div>
+    </li>
+  
+    <li class="news-item">
+      <time class="news-date" datetime="2025-10-01">Oct 01, 2025</time>
+      <div class="news-text"><p>Released <a href="https://tiger-ai-lab.github.io/VisCoder2/">VisCoder2</a>: building multi-language visualization coding agents. Check out our <a href="https://arxiv.org/abs/2510.23642">paper</a> and <a href="https://hf.co/collections/TIGER-Lab/viscoder2">huggingface collection</a>!</p>
+</div>
+    </li>
+  
+</ul>
+
+</section>
+
+<section class="home-section">
+  <div class="section-head">
+    <h2>Selected Publications</h2>
+    <a class="section-more" href="/publications/">All publications →</a>
+  </div>
+  
+  
+
+<ul class="pub-list">
+  
+    <li class="pub-card">
+      
+        <div class="pub-preview">
+          <img
+            src="/assets/img/publication_preview/FIM.png"
+            alt="Preview of Function-Aware Fill-in-the-Middle as Mid-Training for Coding Agent Foundation Models"
+            loading="lazy"
+          />
+        </div>
+      
+      <div class="pub-body">
+        <h3 class="pub-title">
+          
+            Function-Aware Fill-in-the-Middle as Mid-Training for Coding Agent Foundation Models
+          
+        </h3>
+        <p class="pub-authors">Yubo Wang*, <strong>Jiarong Liang</strong>*, Yuxuan Zhang, Xuye Liu, Cong Wei, Yuyu Zhang, Ping Nie, Wenhu Chen</p>
+        <div class="pub-meta">
+          
+            
+              <span class="pub-venue" style="--venue-color: #6c757d">Coming soon</span>
+            
+          
+          
+        </div>
+      </div>
+    </li>
+  
+    <li class="pub-card">
+      
+        <div class="pub-preview">
+          <img
+            src="/assets/img/publication_preview/swenext.png"
+            alt="Preview of SWE-Next: Scalable Real-World Software Engineering Tasks for Agents"
+            loading="lazy"
+          />
+        </div>
+      
+      <div class="pub-body">
+        <h3 class="pub-title">
+          
+            <a href="https://arxiv.org/abs/2603.20691" target="_blank" rel="noopener">SWE-Next: Scalable Real-World Software Engineering Tasks for Agents</a>
+          
+        </h3>
+        <p class="pub-authors"><strong>Jiarong Liang</strong>*, Zhiheng Lyu*, Zijie Liu, Xiangchao Chen, Ping Nie, Kai Zou, Wenhu Chen</p>
+        <div class="pub-meta">
+          
+            
+              <a class="pub-venue" style="--venue-color: #b31b1b" href="https://arxiv.org/abs/2603.20691" target="_blank" rel="noopener">arXiv</a>
+            
+          
+          
+            <a class="pub-link" href="https://arxiv.org/abs/2603.20691" target="_blank" rel="noopener">arXiv</a>
+          
+            <a class="pub-link" href="https://arxiv.org/pdf/2603.20691" target="_blank" rel="noopener">PDF</a>
+          
+            <a class="pub-link" href="https://tiger-ai-lab.github.io/SWE-Next/" target="_blank" rel="noopener">Website</a>
+          
+            <a class="pub-link" href="https://github.com/TIGER-AI-Lab/SWE-Next" target="_blank" rel="noopener">Code</a>
+          
+            <a class="pub-link" href="https://huggingface.co/collections/TIGER-Lab/swe-next" target="_blank" rel="noopener">HuggingFace</a>
+          
+            <a class="pub-link" href="https://x.com/JLiang51825/status/2041620766605586546" target="_blank" rel="noopener">𝕏 Thread</a>
+          
+            <a class="pub-link" href="https://www.linkedin.com/posts/jiarong-liang-b2a8a5239_introducing-swe-next-a-scalable-execution-grounded-ugcPost-7447393376615747584-GYB3" target="_blank" rel="noopener">LinkedIn</a>
+          
+        </div>
+      </div>
+    </li>
+  
+    <li class="pub-card">
+      
+        <div class="pub-preview">
+          <img
+            src="/assets/img/publication_preview/visphyworld.jpeg"
+            alt="Preview of VisPhyWorld: Probing Physical Reasoning via Code-Driven Video Reconstruction"
+            loading="lazy"
+          />
+        </div>
+      
+      <div class="pub-body">
+        <h3 class="pub-title">
+          
+            <a href="https://arxiv.org/abs/2602.13294" target="_blank" rel="noopener">VisPhyWorld: Probing Physical Reasoning via Code-Driven Video Reconstruction</a>
+          
+        </h3>
+        <p class="pub-authors"><strong>Jiarong Liang</strong>*, Max Ku*, Ka-Hei Hui, Ping Nie, Wenhu Chen</p>
+        <div class="pub-meta">
+          
+            
+              <a class="pub-venue" style="--venue-color: #b31b1b" href="https://arxiv.org/abs/2602.13294" target="_blank" rel="noopener">arXiv</a>
+            
+          
+          
+            <a class="pub-link" href="https://arxiv.org/abs/2602.13294" target="_blank" rel="noopener">arXiv</a>
+          
+            <a class="pub-link" href="https://arxiv.org/pdf/2602.13294" target="_blank" rel="noopener">PDF</a>
+          
+            <a class="pub-link" href="https://tiger-ai-lab.github.io/VisPhyWorld/" target="_blank" rel="noopener">Website</a>
+          
+            <a class="pub-link" href="https://github.com/TIGER-AI-Lab/VisPhyWorld" target="_blank" rel="noopener">Code</a>
+          
+            <a class="pub-link" href="https://huggingface.co/collections/TIGER-Lab/visphyworld" target="_blank" rel="noopener">HuggingFace</a>
+          
+            <a class="pub-link" href="https://x.com/JLiang51825/status/2024392655229096298" target="_blank" rel="noopener">𝕏 Thread</a>
+          
+            <a class="pub-link" href="https://www.linkedin.com/posts/jiarong-liang-b2a8a5239_im-excited-to-share-our-recent-work-share-7430007464370003968-oiVR" target="_blank" rel="noopener">LinkedIn</a>
+          
+        </div>
+      </div>
+    </li>
+  
+    <li class="pub-card">
+      
+        <div class="pub-preview">
+          <img
+            src="/assets/img/publication_preview/viscoder2.png"
+            alt="Preview of VisCoder2: Building Multi-Language Visualization Coding Agents"
+            loading="lazy"
+          />
+        </div>
+      
+      <div class="pub-body">
+        <h3 class="pub-title">
+          
+            <a href="https://arxiv.org/abs/2510.23642" target="_blank" rel="noopener">VisCoder2: Building Multi-Language Visualization Coding Agents</a>
+          
+        </h3>
+        <p class="pub-authors">Yuansheng Ni*, Songcheng Cai*, Xiangchao Chen*, <strong>Jiarong Liang</strong>, Zhiheng Lyu, Jiaqi Deng, Kai Zou, Ping Nie, Fei Yuan, Xiang Yue, Wenhu Chen</p>
+        <div class="pub-meta">
+          
+            
+              <a class="pub-venue" style="--venue-color: #6c5ce7" href="https://iclr.cc/Conferences/2026" target="_blank" rel="noopener">ICLR 2026</a>
+            
+          
+          
+            <a class="pub-link" href="https://arxiv.org/abs/2510.23642" target="_blank" rel="noopener">arXiv</a>
+          
+            <a class="pub-link" href="https://tiger-ai-lab.github.io/VisCoder2/" target="_blank" rel="noopener">Website</a>
+          
+            <a class="pub-link" href="https://github.com/TIGER-AI-Lab/VisCoder2" target="_blank" rel="noopener">Code</a>
+          
+            <a class="pub-link" href="https://hf.co/collections/TIGER-Lab/viscoder2" target="_blank" rel="noopener">HuggingFace</a>
+          
+        </div>
+      </div>
+    </li>
+  
+</ul>
+
+</section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <span>© 2026 Jiarong Liang</span>
+        <span>Built with <a href="https://jekyllrb.com/" target="_blank" rel="noopener">Jekyll</a> · Hosted on <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a></span>
+      </div>
+    </footer>
+
+    <script src="/assets/js/theme.js"></script>
+  </body>
+</html>
