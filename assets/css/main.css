@@ -1,0 +1,667 @@
+/* ============================================================
+   Jiarong Liang — 个人主页样式
+   改配色 / 字体 / 宽度：只需要调整下面 :root 里的变量
+   ============================================================ */
+
+:root {
+  color-scheme: light;
+
+  /* 布局 */
+  --max-width: 46rem;
+
+  /* 字体 */
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --serif: "Newsreader", Georgia, "Songti SC", "SimSun", serif;
+
+  /* 浅色主题配色 */
+  --bg: #faf9f7;
+  --surface: #ffffff;
+  --text: #1f2328;
+  --muted: #6e7681;
+  --border: #e6e3dd;
+  --border-strong: #d4d0c8;
+  --accent: #4f46e5;
+  --accent-strong: #4338ca;
+  --accent-soft: rgba(79, 70, 229, 0.08);
+  --shadow: 0 1px 2px rgba(27, 31, 36, 0.06);
+  --shadow-lift: 0 8px 24px rgba(27, 31, 36, 0.1);
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  /* 深色主题配色 */
+  --bg: #0e1116;
+  --surface: #161b22;
+  --text: #e6e6eb;
+  --muted: #9099a3;
+  --border: #262c36;
+  --border-strong: #3a414c;
+  --accent: #a5b4fc;
+  --accent-strong: #c7d2fe;
+  --accent-soft: rgba(165, 180, 252, 0.1);
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-lift: 0 8px 24px rgba(0, 0, 0, 0.45);
+}
+
+/* ------------------------------------------------------------
+   基础
+   ------------------------------------------------------------ */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--sans);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.wrap {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+main.wrap {
+  flex: 1;
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--accent) 25%, transparent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--serif);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+
+/* 正文里的链接：细下划线，悬停变实 */
+.bio a,
+.news-text a,
+.page a:not(.button):not(.pub-link):not(.pub-venue) {
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--accent) 35%, transparent);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.15s ease;
+}
+
+.bio a:hover,
+.news-text a:hover,
+.page a:not(.button):not(.pub-link):not(.pub-venue):hover {
+  text-decoration-color: var(--accent);
+}
+
+/* ------------------------------------------------------------
+   顶部导航
+   ------------------------------------------------------------ */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: color-mix(in srgb, var(--bg) 84%, transparent);
+  -webkit-backdrop-filter: blur(10px) saturate(1.4);
+  backdrop-filter: blur(10px) saturate(1.4);
+  border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  height: 3.5rem;
+}
+
+.site-name {
+  font-family: var(--serif);
+  font-size: 1.18rem;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.site-name:hover {
+  color: var(--accent);
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.site-nav a {
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 500;
+  padding: 0.32rem 0.6rem;
+  border-radius: 6px;
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.site-nav a:hover {
+  color: var(--text);
+  background: var(--accent-soft);
+}
+
+.site-nav a.active {
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+
+#theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.3rem;
+  padding: 0.38rem;
+  border: none;
+  border-radius: 6px;
+  background: none;
+  color: var(--muted);
+  cursor: pointer;
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+#theme-toggle:hover {
+  color: var(--text);
+  background: var(--accent-soft);
+}
+
+#theme-toggle svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+#theme-toggle .icon-sun {
+  display: none;
+}
+
+[data-theme="dark"] #theme-toggle .icon-sun {
+  display: block;
+}
+
+[data-theme="dark"] #theme-toggle .icon-moon {
+  display: none;
+}
+
+/* ------------------------------------------------------------
+   首页 Hero
+   ------------------------------------------------------------ */
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2.25rem;
+}
+
+.hero-name {
+  margin: 0 0 0.4rem;
+  font-size: 2.6rem;
+  line-height: 1.15;
+}
+
+.hero-name-cn {
+  color: var(--muted);
+  font-weight: 500;
+  font-size: 0.82em;
+}
+
+.hero-position {
+  margin: 0 0 1.15rem;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.hero-photo {
+  flex-shrink: 0;
+  width: 9.5rem;
+  height: 9.5rem;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-lift);
+}
+
+/* 社交图标 */
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.3rem;
+  height: 2.3rem;
+  border-radius: 50%;
+  color: var(--muted);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  transition: color 0.15s ease, border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.social-link:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.social-link svg {
+  width: 1.05rem;
+  height: 1.05rem;
+}
+
+/* ------------------------------------------------------------
+   正文 / 自我介绍
+   ------------------------------------------------------------ */
+
+.bio {
+  font-size: 1.02rem;
+}
+
+.bio p {
+  margin: 0 0 1rem;
+}
+
+/* 高亮提示框（首页招生/求职说明） */
+.callout {
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  font-size: 0.98rem;
+  background: var(--accent-soft);
+  border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent);
+  border-left: 3px solid var(--accent);
+  border-radius: 10px;
+}
+
+/* ------------------------------------------------------------
+   首页分区
+   ------------------------------------------------------------ */
+
+.home-section {
+  margin-top: 3rem;
+}
+
+.section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.1rem;
+}
+
+.section-head h2 {
+  margin: 0;
+  font-size: 1.55rem;
+}
+
+.section-more {
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: color 0.15s ease;
+}
+
+.section-more:hover {
+  color: var(--accent);
+}
+
+/* ------------------------------------------------------------
+   News 列表
+   ------------------------------------------------------------ */
+
+.news-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.news-item {
+  display: flex;
+  align-items: baseline;
+  gap: 1.25rem;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.news-item:last-child {
+  border-bottom: none;
+}
+
+.news-date {
+  flex: 0 0 6.8rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+.news-text {
+  flex: 1;
+  font-size: 0.95rem;
+}
+
+.news-text p {
+  margin: 0;
+}
+
+/* ------------------------------------------------------------
+   论文卡片
+   ------------------------------------------------------------ */
+
+.pub-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.pub-card {
+  display: flex;
+  gap: 1.25rem;
+  padding: 1.1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.pub-card:hover {
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
+  box-shadow: var(--shadow-lift);
+  transform: translateY(-2px);
+}
+
+.pub-preview {
+  flex: 0 0 10.5rem;
+  align-self: center;
+}
+
+.pub-preview img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: #ffffff;
+}
+
+.pub-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.pub-title {
+  margin: 0 0 0.35rem;
+  font-size: 1.15rem;
+}
+
+.pub-title a {
+  color: var(--text);
+  transition: color 0.15s ease;
+}
+
+.pub-title a:hover {
+  color: var(--accent);
+}
+
+.pub-authors {
+  margin: 0 0 0.6rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.pub-authors strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.pub-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* 发表处徽章（颜色由 _data/publications.yml 里的 venue_color 决定） */
+.pub-venue {
+  padding: 0.18rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--venue-color) 72%, var(--text));
+  background: color-mix(in srgb, var(--venue-color) 13%, transparent);
+  border: 1px solid color-mix(in srgb, var(--venue-color) 32%, transparent);
+}
+
+a.pub-venue:hover {
+  background: color-mix(in srgb, var(--venue-color) 22%, transparent);
+}
+
+/* 论文链接小按钮 */
+.pub-link {
+  padding: 0.16rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--muted);
+  border: 1px solid var(--border-strong);
+  transition: color 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.pub-link:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+/* Publications 页的年份标题 */
+.pub-year {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 2.2rem 0 1rem;
+  font-size: 1.35rem;
+}
+
+.pub-year::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.page .pub-year:first-of-type {
+  margin-top: 0;
+}
+
+/* ------------------------------------------------------------
+   普通页面（Publications / News / CV / 404）
+   ------------------------------------------------------------ */
+
+.page-head {
+  margin-bottom: 1.75rem;
+}
+
+.page-head h1 {
+  margin: 0 0 0.4rem;
+  font-size: 2.1rem;
+}
+
+.page-desc {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* CV 页 */
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 1rem;
+  border-radius: 8px;
+  background: var(--accent);
+  color: var(--bg);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background-color 0.15s ease, transform 0.15s ease;
+}
+
+.button:hover {
+  background: var(--accent-strong);
+  transform: translateY(-1px);
+}
+
+.cv-frame {
+  width: 100%;
+  height: 82vh;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+}
+
+/* ------------------------------------------------------------
+   页脚
+   ------------------------------------------------------------ */
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 1.4rem 0 1.8rem;
+}
+
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem;
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+.site-footer a {
+  color: var(--muted);
+  text-decoration: underline;
+  text-decoration-color: var(--border-strong);
+  text-underline-offset: 3px;
+}
+
+.site-footer a:hover {
+  color: var(--accent);
+}
+
+/* ------------------------------------------------------------
+   响应式
+   ------------------------------------------------------------ */
+
+@media (max-width: 640px) {
+  .hero {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 1.25rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .hero-name {
+    font-size: 2rem;
+  }
+
+  .hero-photo {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 14px;
+  }
+
+  .pub-card {
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+
+  .pub-preview {
+    flex: none;
+    width: 100%;
+  }
+
+  .pub-preview img {
+    aspect-ratio: 5 / 2;
+  }
+
+  .news-item {
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+
+  .news-date {
+    flex: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .site-name {
+    display: none;
+  }
+
+  .header-inner {
+    justify-content: center;
+  }
+}
+
+/* 减少动态效果（无障碍） */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}

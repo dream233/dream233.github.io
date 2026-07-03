@@ -1,0 +1,11 @@
+{% comment %} News 列表。用法：include news-list.html entries=news数组 limit=可选条数 {% endcomment %}
+{% assign sorted_news = include.entries | sort: "date" | reverse %}
+{% assign news_limit = include.limit | default: 1000 %}
+<ul class="news-list">
+  {% for item in sorted_news limit: news_limit %}
+    <li class="news-item">
+      <time class="news-date" datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: "%b %d, %Y" }}</time>
+      <div class="news-text">{{ item.text | markdownify }}</div>
+    </li>
+  {% endfor %}
+</ul>

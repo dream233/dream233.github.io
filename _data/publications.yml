@@ -1,0 +1,71 @@
+# ============================================================
+# 论文列表 —— 新增论文时，复制一个条目放到最前面并修改字段即可
+#
+# 字段说明：
+#   title        论文标题
+#   authors      作者列表（写自己的名字要和 _config.yml 里的
+#                highlight_author 一致，页面会自动加粗）
+#   year         年份（Publications 页按年份分组显示）
+#   venue        徽章文字，如 "arXiv" / "ICLR 2026" / "Coming soon"
+#   venue_color  徽章颜色（十六进制）
+#   venue_url    （可选）点击徽章跳转的链接
+#   preview      （可选）预览图文件名，放在 assets/img/publication_preview/
+#   selected     true 则同时显示在首页 Selected Publications
+#   links        （可选）链接按钮列表，label 任意写，想加几个加几个
+# ============================================================
+
+- title: "Function-Aware Fill-in-the-Middle as Mid-Training for Coding Agent Foundation Models"
+  authors: "Yubo Wang*, Jiarong Liang*, Yuxuan Zhang, Xuye Liu, Cong Wei, Yuyu Zhang, Ping Nie, Wenhu Chen"
+  year: 2026
+  venue: "Coming soon"
+  venue_color: "#6c757d"
+  preview: FIM.png
+  selected: true
+
+- title: "SWE-Next: Scalable Real-World Software Engineering Tasks for Agents"
+  authors: "Jiarong Liang*, Zhiheng Lyu*, Zijie Liu, Xiangchao Chen, Ping Nie, Kai Zou, Wenhu Chen"
+  year: 2026
+  venue: "arXiv"
+  venue_color: "#b31b1b"
+  venue_url: https://arxiv.org/abs/2603.20691
+  preview: swenext.png
+  selected: true
+  links:
+    - { label: "arXiv", url: "https://arxiv.org/abs/2603.20691" }
+    - { label: "PDF", url: "https://arxiv.org/pdf/2603.20691" }
+    - { label: "Website", url: "https://tiger-ai-lab.github.io/SWE-Next/" }
+    - { label: "Code", url: "https://github.com/TIGER-AI-Lab/SWE-Next" }
+    - { label: "HuggingFace", url: "https://huggingface.co/collections/TIGER-Lab/swe-next" }
+    - { label: "𝕏 Thread", url: "https://x.com/JLiang51825/status/2041620766605586546" }
+    - { label: "LinkedIn", url: "https://www.linkedin.com/posts/jiarong-liang-b2a8a5239_introducing-swe-next-a-scalable-execution-grounded-ugcPost-7447393376615747584-GYB3" }
+
+- title: "VisPhyWorld: Probing Physical Reasoning via Code-Driven Video Reconstruction"
+  authors: "Jiarong Liang*, Max Ku*, Ka-Hei Hui, Ping Nie, Wenhu Chen"
+  year: 2026
+  venue: "arXiv"
+  venue_color: "#b31b1b"
+  venue_url: https://arxiv.org/abs/2602.13294
+  preview: visphyworld.jpeg
+  selected: true
+  links:
+    - { label: "arXiv", url: "https://arxiv.org/abs/2602.13294" }
+    - { label: "PDF", url: "https://arxiv.org/pdf/2602.13294" }
+    - { label: "Website", url: "https://tiger-ai-lab.github.io/VisPhyWorld/" }
+    - { label: "Code", url: "https://github.com/TIGER-AI-Lab/VisPhyWorld" }
+    - { label: "HuggingFace", url: "https://huggingface.co/collections/TIGER-Lab/visphyworld" }
+    - { label: "𝕏 Thread", url: "https://x.com/JLiang51825/status/2024392655229096298" }
+    - { label: "LinkedIn", url: "https://www.linkedin.com/posts/jiarong-liang-b2a8a5239_im-excited-to-share-our-recent-work-share-7430007464370003968-oiVR" }
+
+- title: "VisCoder2: Building Multi-Language Visualization Coding Agents"
+  authors: "Yuansheng Ni*, Songcheng Cai*, Xiangchao Chen*, Jiarong Liang, Zhiheng Lyu, Jiaqi Deng, Kai Zou, Ping Nie, Fei Yuan, Xiang Yue, Wenhu Chen"
+  year: 2026
+  venue: "ICLR 2026"
+  venue_color: "#6c5ce7"
+  venue_url: https://iclr.cc/Conferences/2026
+  preview: viscoder2.png
+  selected: true
+  links:
+    - { label: "arXiv", url: "https://arxiv.org/abs/2510.23642" }
+    - { label: "Website", url: "https://tiger-ai-lab.github.io/VisCoder2/" }
+    - { label: "Code", url: "https://github.com/TIGER-AI-Lab/VisCoder2" }
+    - { label: "HuggingFace", url: "https://hf.co/collections/TIGER-Lab/viscoder2" }

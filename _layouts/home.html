@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+<section class="hero">
+  <div class="hero-text">
+    <h1 class="hero-name">
+      {{ site.name }}{% if site.name_cn %} <span class="hero-name-cn">{{ site.name_cn }}</span>{% endif %}
+    </h1>
+    <p class="hero-position">{{ site.position }}</p>
+    {% include social-icons.html %}
+  </div>
+  <img
+    class="hero-photo"
+    src="{{ '/assets/img/prof_pic.jpg' | relative_url }}"
+    alt="Portrait of {{ site.name }}"
+    width="152"
+    height="152"
+  />
+</section>
+
+<div class="bio">
+  {{ content }}
+</div>
+
+<section class="home-section">
+  <div class="section-head">
+    <h2>News</h2>
+    <a class="section-more" href="{{ '/news/' | relative_url }}">All news →</a>
+  </div>
+  {% include news-list.html entries=site.data.news limit=site.home_news_limit %}
+</section>
+
+<section class="home-section">
+  <div class="section-head">
+    <h2>Selected Publications</h2>
+    <a class="section-more" href="{{ '/publications/' | relative_url }}">All publications →</a>
+  </div>
+  {% assign selected = site.data.publications | where_exp: "pub", "pub.selected" %}
+  {% include publication-list.html entries=selected %}
+</section>

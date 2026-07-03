@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% if page.url == "/" %}
+      {% capture page_title %}{{ site.name }}{% if site.name_cn %} ({{ site.name_cn }}){% endif %}{% endcapture %}
+    {% else %}
+      {% capture page_title %}{{ page.title }} · {{ site.name }}{% endcapture %}
+    {% endif %}
+    <title>{{ page_title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description | strip_html | strip_newlines | strip }}" />
+    <meta property="og:title" content="{{ page_title }}" />
+    <meta property="og:description" content="{{ page.description | default: site.description | strip_html | strip_newlines | strip }}" />
+    <meta property="og:image" content="{{ '/assets/img/prof_pic.jpg' | absolute_url }}" />
+    <meta property="og:url" content="{{ page.url | absolute_url }}" />
+    <link rel="canonical" href="{{ page.url | absolute_url }}" />
+    <link rel="icon" href="{{ '/assets/img/favicon.ico' | relative_url }}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+    <script>
+      // 在页面渲染前恢复上次选择的主题，避免明暗闪烁
+      (function () {
+        var theme = localStorage.getItem("theme");
+        if (!theme) theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="site-name" href="{{ '/' | relative_url }}">{{ site.name }}</a>
+        <nav class="site-nav" aria-label="Main navigation">
+          {% for item in site.nav %}
+            <a href="{{ item.url | relative_url }}" {% if page.url == item.url %}class="active" aria-current="page"{% endif %}>{{ item.title }}</a>
+          {% endfor %}
+          <button id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+            <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+            <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5" />
+              <path d="M12 1v3M12 20v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M1 12h3M20 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12" />
+            </svg>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="wrap">
+      {{ content }}
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <span>© {{ site.time | date: "%Y" }} {{ site.name }}</span>
+        <span>Built with <a href="https://jekyllrb.com/" target="_blank" rel="noopener">Jekyll</a> · Hosted on <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a></span>
+      </div>
+    </footer>
+
+    <script src="{{ '/assets/js/theme.js' | relative_url }}"></script>
+  </body>
+</html>

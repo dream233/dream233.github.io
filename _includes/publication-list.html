@@ -1,0 +1,39 @@
+{% comment %} 论文卡片列表。用法：include publication-list.html entries=论文数组 {% endcomment %}
+{% assign bold_name = "<strong>" | append: site.highlight_author | append: "</strong>" %}
+<ul class="pub-list">
+  {% for pub in include.entries %}
+    <li class="pub-card">
+      {% if pub.preview %}
+        <div class="pub-preview">
+          <img
+            src="{{ '/assets/img/publication_preview/' | append: pub.preview | relative_url }}"
+            alt="Preview of {{ pub.title }}"
+            loading="lazy"
+          />
+        </div>
+      {% endif %}
+      <div class="pub-body">
+        <h3 class="pub-title">
+          {% if pub.links and pub.links.size > 0 %}
+            <a href="{{ pub.links[0].url }}" target="_blank" rel="noopener">{{ pub.title }}</a>
+          {% else %}
+            {{ pub.title }}
+          {% endif %}
+        </h3>
+        <p class="pub-authors">{{ pub.authors | replace: site.highlight_author, bold_name }}</p>
+        <div class="pub-meta">
+          {% if pub.venue %}
+            {% if pub.venue_url %}
+              <a class="pub-venue" style="--venue-color: {{ pub.venue_color | default: '#6e7681' }}" href="{{ pub.venue_url }}" target="_blank" rel="noopener">{{ pub.venue }}</a>
+            {% else %}
+              <span class="pub-venue" style="--venue-color: {{ pub.venue_color | default: '#6e7681' }}">{{ pub.venue }}</span>
+            {% endif %}
+          {% endif %}
+          {% for link in pub.links %}
+            <a class="pub-link" href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
+          {% endfor %}
+        </div>
+      </div>
+    </li>
+  {% endfor %}
+</ul>
