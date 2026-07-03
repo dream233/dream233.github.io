@@ -8,3 +8,27 @@
     localStorage.setItem("theme", next);
   });
 })();
+
+// 点击论文预览图放大查看；点击任意处或按 Esc 关闭
+(function () {
+  document.querySelectorAll(".pub-preview img").forEach(function (img) {
+    img.addEventListener("click", function () {
+      var overlay = document.createElement("div");
+      overlay.className = "lightbox";
+      var full = document.createElement("img");
+      full.src = img.dataset.full || img.src;
+      full.alt = img.alt;
+      overlay.appendChild(full);
+      document.body.appendChild(overlay);
+      function onKey(event) {
+        if (event.key === "Escape") close();
+      }
+      function close() {
+        overlay.remove();
+        document.removeEventListener("keydown", onKey);
+      }
+      overlay.addEventListener("click", close);
+      document.addEventListener("keydown", onKey);
+    });
+  });
+})();

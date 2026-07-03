@@ -9,7 +9,10 @@
 #   venue        徽章文字，如 "arXiv" / "ICLR 2026" / "Coming soon"
 #   venue_color  徽章颜色（十六进制）
 #   venue_url    （可选）点击徽章跳转的链接
-#   preview      （可选）预览图文件名，放在 assets/img/publication_preview/
+#   preview      （可选）预览大图文件名（点击放大时显示），放在
+#                assets/img/publication_preview/
+#   preview_thumb（可选）卡片里显示的缩略图；不写就直接用 preview（会变慢）
+#                生成方法见 README「图片优化」一节
 #   selected     true 则同时显示在首页 Selected Publications
 #   links        （可选）链接按钮列表，label 任意写，想加几个加几个
 # ============================================================
@@ -19,7 +22,8 @@
   year: 2026
   venue: "Coming soon"
   venue_color: "#6c757d"
-  preview: FIM.png
+  preview: FIM.webp
+  preview_thumb: FIM-thumb.webp
   selected: true
 
 - title: "SWE-Next: Scalable Real-World Software Engineering Tasks for Agents"
@@ -28,7 +32,8 @@
   venue: "arXiv"
   venue_color: "#b31b1b"
   venue_url: https://arxiv.org/abs/2603.20691
-  preview: swenext.png
+  preview: swenext.webp
+  preview_thumb: swenext-thumb.webp
   selected: true
   links:
     - { label: "arXiv", url: "https://arxiv.org/abs/2603.20691" }
@@ -45,7 +50,8 @@
   venue: "arXiv"
   venue_color: "#b31b1b"
   venue_url: https://arxiv.org/abs/2602.13294
-  preview: visphyworld.jpeg
+  preview: visphyworld.webp
+  preview_thumb: visphyworld-thumb.webp
   selected: true
   links:
     - { label: "arXiv", url: "https://arxiv.org/abs/2602.13294" }
@@ -62,7 +68,8 @@
   venue: "ICLR 2026"
   venue_color: "#6c5ce7"
   venue_url: https://iclr.cc/Conferences/2026
-  preview: viscoder2.png
+  preview: viscoder2.webp
+  preview_thumb: viscoder2-thumb.webp
   selected: true
   links:
     - { label: "arXiv", url: "https://arxiv.org/abs/2510.23642" }

@@ -16,6 +16,27 @@
     <meta property="og:url" content="{{ page.url | absolute_url }}" />
     <link rel="canonical" href="{{ page.url | absolute_url }}" />
     <link rel="icon" href="{{ '/assets/img/favicon.ico' | relative_url }}" />
+    <meta name="theme-color" content="#faf9f7" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0e1116" media="(prefers-color-scheme: dark)" />
+    {% if page.url == "/" %}
+      {% assign profile_links = "" | split: "" %}
+      {% for social in site.socials %}
+        {% unless social.url contains "mailto:" %}{% assign profile_links = profile_links | push: social.url %}{% endunless %}
+      {% endfor %}
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": {{ site.name | jsonify }},
+          "alternateName": {{ site.name_cn | jsonify }},
+          "jobTitle": {{ site.position | jsonify }},
+          "email": "mailto:{{ site.email }}",
+          "url": {{ site.url | jsonify }},
+          "image": {{ '/assets/img/prof_pic.jpg' | absolute_url | jsonify }},
+          "sameAs": {{ profile_links | jsonify }}
+        }
+      </script>
+    {% endif %}
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -33,6 +54,7 @@
     </script>
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="wrap header-inner">
         <a class="site-name" href="{{ '/' | relative_url }}">{{ site.name }}</a>
@@ -53,7 +75,7 @@
       </div>
     </header>
 
-    <main class="wrap">
+    <main id="main" class="wrap">
       {{ content }}
     </main>
 

@@ -4,11 +4,14 @@
   {% for pub in include.entries %}
     <li class="pub-card">
       {% if pub.preview %}
+        {% assign thumb = pub.preview_thumb | default: pub.preview %}
         <div class="pub-preview">
           <img
-            src="{{ '/assets/img/publication_preview/' | append: pub.preview | relative_url }}"
+            src="{{ '/assets/img/publication_preview/' | append: thumb | relative_url }}"
+            data-full="{{ '/assets/img/publication_preview/' | append: pub.preview | relative_url }}"
             alt="Preview of {{ pub.title }}"
             loading="lazy"
+            decoding="async"
           />
         </div>
       {% endif %}

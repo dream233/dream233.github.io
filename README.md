@@ -21,7 +21,7 @@ _includes/publication-list.html   论文卡片组件
 _includes/news-list.html          News 列表组件
 _includes/social-icons.html       社交图标组件（内联 SVG）
 assets/css/main.css          全站样式（配色/字体变量集中在文件开头的 :root）
-assets/js/theme.js           明暗主题切换（全站唯一的 JS）
+assets/js/theme.js           明暗主题切换 + 预览图点击放大（全站唯一的 JS）
 assets/img/prof_pic.jpg      头像
 assets/img/publication_preview/   论文预览图
 assets/pdf/cv.pdf            简历 PDF
@@ -39,6 +39,29 @@ assets/pdf/cv.pdf            简历 PDF
 | 改邮箱/社交链接/职位 | `_config.yml` |
 | 改配色 / 字体 / 页面宽度 | `assets/css/main.css` 开头的 `:root` 变量 |
 | 首页 News 显示条数 | `_config.yml` 里的 `home_news_limit` |
+
+## 图片优化
+
+论文预览图每张存两个尺寸（都放在 `assets/img/publication_preview/`）：
+
+- `xxx.webp`：大图（≤1600px 宽），点击卡片缩略图放大时才加载
+- `xxx-thumb.webp`：缩略图（640px 宽），卡片里显示，保证页面秒开
+
+新增论文时用下面的命令从原图生成这两个文件（需要 Python + Pillow）：
+
+```bash
+python3 -c "
+from PIL import Image
+src, name = '原图.png', 'xxx'   # 改成你的文件
+im = Image.open(src).convert('RGB')
+for w, suf in [(1600, ''), (640, '-thumb')]:
+    out = im.resize((w, round(im.height*w/im.width)), Image.LANCZOS) if im.width > w else im
+    out.save(f'assets/img/publication_preview/{name}{suf}.webp', 'WEBP', quality=80, method=6)
+"
+```
+
+然后在 `_data/publications.yml` 里写 `preview: xxx.webp` 和 `preview_thumb: xxx-thumb.webp`。
+（偷懒也可以只放一张图、只写 `preview:`，页面能正常显示，只是加载会慢。）
 
 ## 本地预览
 
