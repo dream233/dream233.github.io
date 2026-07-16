@@ -3,8 +3,8 @@
 # text 支持 Markdown 语法（链接、加粗等）
 # ============================================================
 
-- date: 2026-05-06
-  text: "New work coming soon: **Function-Aware Fill-in-the-Middle as Mid-Training for Coding Agent Foundation Models**. Stay tuned!"
+- date: 2026-07-14
+  text: "Released [FIM-Midtraining](https://github.com/TIGER-AI-Lab/FIM-Midtraining): Function-Aware Fill-in-the-Middle as Mid-Training for Coding Agent Foundation Models. Check out our [paper](https://arxiv.org/abs/2607.12463) and [huggingface collection](https://huggingface.co/collections/TIGER-Lab/fim-midtraining)!"
 
 - date: 2026-04-07
   text: "Released [SWE-Next](https://github.com/TIGER-AI-Lab/SWE-Next): Scalable Real-World Software Engineering Tasks for Agents. Check out our [paper](https://arxiv.org/abs/2603.20691), [project page](https://tiger-ai-lab.github.io/SWE-Next/), and [dataset](https://huggingface.co/datasets/TIGER-Lab/SWE-Next)!"
