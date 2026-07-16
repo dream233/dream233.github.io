@@ -20,11 +20,17 @@
 - title: "Function-Aware Fill-in-the-Middle as Mid-Training for Coding Agent Foundation Models"
   authors: "Yubo Wang*, Jiarong Liang*, Yuxuan Zhang, Xuye Liu, Cong Wei, Yuyu Zhang, Ping Nie, Wenhu Chen"
   year: 2026
-  venue: "Coming soon"
-  venue_color: "#6c757d"
+  venue: "arXiv"
+  venue_color: "#b31b1b"
+  venue_url: https://arxiv.org/abs/2607.12463
   preview: FIM.webp
   preview_thumb: FIM-thumb.webp
   selected: true
+  links:
+    - { label: "arXiv", url: "https://arxiv.org/abs/2607.12463" }
+    - { label: "PDF", url: "https://arxiv.org/pdf/2607.12463" }
+    - { label: "Code", url: "https://github.com/TIGER-AI-Lab/FIM-Midtraining" }
+    - { label: "HuggingFace", url: "https://huggingface.co/collections/TIGER-Lab/fim-midtraining" }
 
 - title: "SWE-Next: Scalable Real-World Software Engineering Tasks for Agents"
   authors: "Jiarong Liang*, Zhiheng Lyu*, Zijie Liu, Xiangchao Chen, Ping Nie, Kai Zou, Wenhu Chen"
