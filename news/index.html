@@ -6,26 +6,28 @@
     
     <title>News · Jiarong Liang</title>
     <meta name="description" content="Jiarong Liang (梁家榕) is a Research Assistant at the University of Waterloo, working on natural language processing and large language models." />
+    <meta property="og:type" content="website" />
     <meta property="og:title" content="News · Jiarong Liang" />
     <meta property="og:description" content="Jiarong Liang (梁家榕) is a Research Assistant at the University of Waterloo, working on natural language processing and large language models." />
     <meta property="og:image" content="https://dream233.github.io/assets/img/prof_pic.jpg" />
     <meta property="og:url" content="https://dream233.github.io/news/" />
+    <meta name="twitter:card" content="summary" />
     <link rel="canonical" href="https://dream233.github.io/news/" />
     <link rel="icon" href="/assets/img/favicon.ico" />
     <meta name="theme-color" content="#faf9f7" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#0e1116" media="(prefers-color-scheme: dark)" />
     
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..600&display=swap"
-      rel="stylesheet"
-    />
+    <!-- 字体放在本站 assets/fonts，不依赖 Google Fonts（国内访问会被卡住白屏）。
+         只预加载标题字体：两个都预加载会在慢网速下和 CSS 抢带宽，反而推迟首屏 -->
+    <link rel="preload" href="/assets/fonts/newsreader-latin-600.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="/assets/css/main.css" />
     <script>
       // 在页面渲染前恢复上次选择的主题，避免明暗闪烁
       (function () {
-        var theme = localStorage.getItem("theme");
+        var theme;
+        try {
+          theme = localStorage.getItem("theme");
+        } catch (e) {} // 浏览器禁用存储时直接跟随系统
         if (!theme) theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
         document.documentElement.setAttribute("data-theme", theme);
       })();
@@ -64,31 +66,38 @@
   <header class="page-head">
     <h1>News</h1>
     
+    
   </header>
   
 <ul class="news-list">
   
     <li class="news-item">
+      <time class="news-date" datetime="2026-10-20">Oct 20, 2026</time>
+      <div class="news-text"><p>Released <a href="https://github.com/TIGER-AI-Lab/StopLoss">StopLoss</a>, a small monitor that learns from finished runs to predict when a coding agent is about to fail, so doomed runs can be stopped early. Read the <a href="https://arxiv.org/abs/2610.25525">paper</a>, browse the <a href="https://tiger-ai-lab.github.io/StopLoss/">project page</a>, or grab the <a href="https://huggingface.co/collections/TIGER-Lab/stoploss">models and training data</a>.</p>
+</div>
+    </li>
+  
+    <li class="news-item">
       <time class="news-date" datetime="2026-07-14">Jul 14, 2026</time>
-      <div class="news-text"><p>Released <a href="https://github.com/TIGER-AI-Lab/FIM-Midtraining">FIM-Midtraining</a>: Function-Aware Fill-in-the-Middle as Mid-Training for Coding Agent Foundation Models. Check out our <a href="https://arxiv.org/abs/2607.12463">paper</a> and <a href="https://huggingface.co/collections/TIGER-Lab/fim-midtraining">huggingface collection</a>!</p>
+      <div class="news-text"><p>New preprint: <a href="https://github.com/TIGER-AI-Lab/FIM-Midtraining">FIM-Midtraining</a> mid-trains code LLMs to fill in masked functions, a task that mirrors how an agent calls a tool and uses the result, and lifts SWE-Bench-Verified by about 3 points. The <a href="https://arxiv.org/abs/2607.12463">paper</a> is on arXiv, and the checkpoints and 2.6B-token corpus are on <a href="https://huggingface.co/collections/TIGER-Lab/fim-midtraining">Hugging Face</a>.</p>
 </div>
     </li>
   
     <li class="news-item">
       <time class="news-date" datetime="2026-04-07">Apr 07, 2026</time>
-      <div class="news-text"><p>Released <a href="https://github.com/TIGER-AI-Lab/SWE-Next">SWE-Next</a>: Scalable Real-World Software Engineering Tasks for Agents. Check out our <a href="https://arxiv.org/abs/2603.20691">paper</a>, <a href="https://tiger-ai-lab.github.io/SWE-Next/">project page</a>, and <a href="https://huggingface.co/datasets/TIGER-Lab/SWE-Next">dataset</a>!</p>
+      <div class="news-text"><p><a href="https://github.com/TIGER-AI-Lab/SWE-Next">SWE-Next</a> is out! It turns real merged GitHub pull requests into 2,308 self-verifying tasks for training software-engineering agents. See the <a href="https://arxiv.org/abs/2603.20691">paper</a>, the <a href="https://tiger-ai-lab.github.io/SWE-Next/">project page</a>, and the <a href="https://huggingface.co/datasets/TIGER-Lab/SWE-Next">dataset</a>.</p>
 </div>
     </li>
   
     <li class="news-item">
       <time class="news-date" datetime="2026-02-08">Feb 08, 2026</time>
-      <div class="news-text"><p>Released <a href="https://github.com/TIGER-AI-Lab/VisPhyWorld">VisPhyWorld</a>: Probing Physical Reasoning via Code-Driven Video Reconstruction. Check out our <a href="https://arxiv.org/pdf/2602.13294">paper</a> and <a href="https://huggingface.co/collections/TIGER-Lab/visphyworld">huggingface collection</a>!</p>
+      <div class="news-text"><p>Introducing <a href="https://github.com/TIGER-AI-Lab/VisPhyWorld">VisPhyWorld</a>, which tests whether multimodal LLMs really understand physics by asking them to rebuild a video as runnable simulator code. The <a href="https://arxiv.org/abs/2602.13294">paper</a> and <a href="https://huggingface.co/collections/TIGER-Lab/visphyworld">benchmark data</a> are available now.</p>
 </div>
     </li>
   
     <li class="news-item">
       <time class="news-date" datetime="2025-10-01">Oct 01, 2025</time>
-      <div class="news-text"><p>Released <a href="https://tiger-ai-lab.github.io/VisCoder2/">VisCoder2</a>: building multi-language visualization coding agents. Check out our <a href="https://arxiv.org/abs/2510.23642">paper</a> and <a href="https://hf.co/collections/TIGER-Lab/viscoder2">huggingface collection</a>!</p>
+      <div class="news-text"><p>Our <a href="https://tiger-ai-lab.github.io/VisCoder2/">VisCoder2</a> models (3B to 32B) write, run, and self-debug visualization code in 12 programming languages. Details are in the <a href="https://arxiv.org/abs/2510.23642">paper</a>; the models, the 679K-sample training set, and the VisPlotBench benchmark live in our <a href="https://hf.co/collections/TIGER-Lab/viscoder2">Hugging Face collection</a>.</p>
 </div>
     </li>
   
@@ -101,7 +110,7 @@
 
     <footer class="site-footer">
       <div class="wrap footer-inner">
-        <span>© 2026 Jiarong Liang</span>
+        <span>© 2026 Jiarong Liang · Last updated Oct 23, 2026</span>
         <span>Built with <a href="https://jekyllrb.com/" target="_blank" rel="noopener">Jekyll</a> · Hosted on <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a></span>
       </div>
     </footer>
