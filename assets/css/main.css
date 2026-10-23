@@ -3,6 +3,26 @@
    改配色 / 字体 / 宽度：只需要调整下面 :root 里的变量
    ============================================================ */
 
+/* 字体文件放在本站 assets/fonts（拉丁字符子集），中文自动回退到系统字体。
+   font-display: swap —— 字体还没下载完时先用系统字体显示，绝不白屏等待 */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url("../fonts/inter-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Newsreader";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/newsreader-latin-600.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 :root {
   color-scheme: light;
 
@@ -85,34 +105,6 @@ body::before {
   background: radial-gradient(38rem 19rem at 50% 40%, color-mix(in srgb, var(--accent) 9%, transparent), transparent 70%);
 }
 
-/* 页面内容渐入 */
-@keyframes fade-up {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-main.wrap > * {
-  animation: fade-up 0.45s ease both;
-}
-
-main.wrap > :nth-child(2) {
-  animation-delay: 0.08s;
-}
-
-main.wrap > :nth-child(3) {
-  animation-delay: 0.16s;
-}
-
-main.wrap > :nth-child(4) {
-  animation-delay: 0.24s;
-}
-
 /* 键盘用户的跳转链接（Tab 键聚焦时出现） */
 .skip-link {
   position: absolute;
@@ -168,12 +160,17 @@ h3 {
   font-weight: 600;
   letter-spacing: -0.01em;
   line-height: 1.25;
+  text-wrap: pretty; /* 折行时避免最后一行只剩一个词 */
 }
 
-/* 正文里的链接：细下划线，悬停变实 */
+p {
+  text-wrap: pretty;
+}
+
+/* 正文里的链接：细下划线，悬停变实（论文卡片里的链接不加） */
 .bio a,
 .news-text a,
-.page a:not(.button):not(.pub-link):not(.pub-venue) {
+.page-desc a {
   text-decoration: underline;
   text-decoration-color: color-mix(in srgb, var(--accent) 35%, transparent);
   text-underline-offset: 3px;
@@ -182,7 +179,7 @@ h3 {
 
 .bio a:hover,
 .news-text a:hover,
-.page a:not(.button):not(.pub-link):not(.pub-venue):hover {
+.page-desc a:hover {
   text-decoration-color: var(--accent);
 }
 
@@ -409,6 +406,12 @@ h3 {
   color: var(--accent);
 }
 
+.section-note {
+  margin: -0.6rem 0 1rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
 /* ------------------------------------------------------------
    News 列表
    ------------------------------------------------------------ */
@@ -469,38 +472,50 @@ h3 {
   border: 1px solid var(--border);
   border-radius: 14px;
   box-shadow: var(--shadow);
-  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .pub-card:hover {
-  border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
+  border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
   box-shadow: var(--shadow-lift);
-  transform: translateY(-2px);
 }
 
+/* 论文预览图：白底图版，完整显示整张图（不裁切），点击放大 */
 .pub-preview {
-  flex: 0 0 10.5rem;
+  flex: 0 0 12rem;
   align-self: center;
   overflow: hidden;
   border-radius: 8px;
   border: 1px solid var(--border);
   background: #ffffff;
+  cursor: zoom-in;
+  transition: border-color 0.15s ease;
+}
+
+.pub-preview:hover {
+  border-color: var(--accent);
 }
 
 .pub-preview img {
   display: block;
   width: 100%;
-  aspect-ratio: 3 / 2;
-  object-fit: cover;
-  cursor: zoom-in;
-  transition: transform 0.35s ease;
+  aspect-ratio: 16 / 10;
+  object-fit: contain;
+  padding: 0.3rem;
 }
 
-.pub-card:hover .pub-preview img {
-  transform: scale(1.05);
+/* 深色模式下把白底图稍微压暗，不刺眼 */
+[data-theme="dark"] .pub-preview {
+  filter: brightness(0.88);
 }
 
 /* 点击预览图后的全屏放大层（由 theme.js 创建） */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
 .lightbox {
   position: fixed;
   top: 0;
@@ -516,11 +531,13 @@ h3 {
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
   cursor: zoom-out;
-  animation: fade-up 0.2s ease;
+  animation: fade-in 0.2s ease;
 }
 
 .lightbox img {
-  max-width: min(92vw, 70rem);
+  /* --ratio 由 theme.js 按图片宽高比设置：先显示的缩略图和随后换上的大图尺寸一致 */
+  width: min(100%, 70rem, calc(90vh * var(--ratio)));
+  max-width: 100%;
   max-height: 90vh;
   border-radius: 10px;
   background: #ffffff;
@@ -675,7 +692,7 @@ a.pub-venue:hover {
   margin: 0;
   font-family: var(--serif);
   font-size: 6.5rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1;
   color: color-mix(in srgb, var(--accent) 45%, var(--bg));
 }
@@ -752,7 +769,7 @@ a.pub-venue:hover {
   }
 
   .pub-preview img {
-    aspect-ratio: 5 / 2;
+    aspect-ratio: 2 / 1;
   }
 
   .news-item {

@@ -10,10 +10,12 @@
     {% endif %}
     <title>{{ page_title }}</title>
     <meta name="description" content="{{ page.description | default: site.description | strip_html | strip_newlines | strip }}" />
+    <meta property="og:type" content="website" />
     <meta property="og:title" content="{{ page_title }}" />
     <meta property="og:description" content="{{ page.description | default: site.description | strip_html | strip_newlines | strip }}" />
     <meta property="og:image" content="{{ '/assets/img/prof_pic.jpg' | absolute_url }}" />
     <meta property="og:url" content="{{ page.url | absolute_url }}" />
+    <meta name="twitter:card" content="summary" />
     <link rel="canonical" href="{{ page.url | absolute_url }}" />
     <link rel="icon" href="{{ '/assets/img/favicon.ico' | relative_url }}" />
     <meta name="theme-color" content="#faf9f7" media="(prefers-color-scheme: light)" />
@@ -37,17 +39,17 @@
         }
       </script>
     {% endif %}
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..600&display=swap"
-      rel="stylesheet"
-    />
+    <!-- 字体放在本站 assets/fonts，不依赖 Google Fonts（国内访问会被卡住白屏）。
+         只预加载标题字体：两个都预加载会在慢网速下和 CSS 抢带宽，反而推迟首屏 -->
+    <link rel="preload" href="{{ '/assets/fonts/newsreader-latin-600.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
     <script>
       // 在页面渲染前恢复上次选择的主题，避免明暗闪烁
       (function () {
-        var theme = localStorage.getItem("theme");
+        var theme;
+        try {
+          theme = localStorage.getItem("theme");
+        } catch (e) {} // 浏览器禁用存储时直接跟随系统
         if (!theme) theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
         document.documentElement.setAttribute("data-theme", theme);
       })();
@@ -81,7 +83,7 @@
 
     <footer class="site-footer">
       <div class="wrap footer-inner">
-        <span>© {{ site.time | date: "%Y" }} {{ site.name }}</span>
+        <span>© {{ site.time | date: "%Y" }} {{ site.name }} · Last updated {{ site.time | date: "%b %-d, %Y" }}</span>
         <span>Built with <a href="https://jekyllrb.com/" target="_blank" rel="noopener">Jekyll</a> · Hosted on <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a></span>
       </div>
     </footer>

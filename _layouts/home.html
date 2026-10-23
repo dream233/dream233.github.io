@@ -5,7 +5,7 @@ layout: default
 <section class="hero">
   <div class="hero-text">
     <h1 class="hero-name">
-      {{ site.name }}{% if site.name_cn %} <span class="hero-name-cn">{{ site.name_cn }}</span>{% endif %}
+      {{ site.name }}{% if site.name_cn %} <span class="hero-name-cn" lang="zh-CN">{{ site.name_cn }}</span>{% endif %}
     </h1>
     <p class="hero-position">{{ site.position }}</p>
     {% include social-icons.html %}
@@ -37,6 +37,7 @@ layout: default
     <h2>Selected Publications</h2>
     <a class="section-more" href="{{ '/publications/' | relative_url }}">All publications →</a>
   </div>
+  <p class="section-note">* denotes equal contribution</p>
   {% assign selected = site.data.publications | where_exp: "pub", "pub.selected" %}
   {% include publication-list.html entries=selected %}
 </section>

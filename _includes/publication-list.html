@@ -5,15 +5,15 @@
     <li class="pub-card">
       {% if pub.preview %}
         {% assign thumb = pub.preview_thumb | default: pub.preview %}
-        <div class="pub-preview">
+        {% comment %} 缩略图包在指向大图的链接里：键盘可操作，JS 没加载时点击也能直接看大图 {% endcomment %}
+        <a class="pub-preview" href="{{ '/assets/img/publication_preview/' | append: pub.preview | relative_url }}" title="Enlarge figure">
           <img
             src="{{ '/assets/img/publication_preview/' | append: thumb | relative_url }}"
-            data-full="{{ '/assets/img/publication_preview/' | append: pub.preview | relative_url }}"
-            alt="Preview of {{ pub.title }}"
+            alt="Preview of {{ pub.title | escape }}"
             loading="lazy"
             decoding="async"
           />
-        </div>
+        </a>
       {% endif %}
       <div class="pub-body">
         <h3 class="pub-title">

@@ -2,7 +2,7 @@
 layout: page
 title: Publications
 permalink: /publications/
-description: "* denotes equal contribution"
+subtitle: "* denotes equal contribution"
 ---
 
 {% assign pubs_by_year = site.data.publications | group_by: "year" %}

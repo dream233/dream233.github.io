@@ -22,6 +22,7 @@ _includes/news-list.html          News 列表组件
 _includes/social-icons.html       社交图标组件（内联 SVG）
 assets/css/main.css          全站样式（配色/字体变量集中在文件开头的 :root）
 assets/js/theme.js           明暗主题切换 + 预览图点击放大（全站唯一的 JS）
+assets/fonts/                网页字体（放在本站，不依赖 Google Fonts，见下文「字体」）
 assets/img/prof_pic.jpg      头像
 assets/img/publication_preview/   论文预览图
 assets/pdf/cv.pdf            简历 PDF
@@ -39,6 +40,7 @@ assets/pdf/cv.pdf            简历 PDF
 | 改邮箱/社交链接/职位 | `_config.yml` |
 | 改配色 / 字体 / 页面宽度 | `assets/css/main.css` 开头的 `:root` 变量 |
 | 首页 News 显示条数 | `_config.yml` 里的 `home_news_limit` |
+| 页面标题下的小字 | 该页面开头的 `subtitle:`（`description:` 只给搜索引擎看，不显示） |
 
 ## 图片优化
 
@@ -62,6 +64,15 @@ for w, suf in [(1600, ''), (640, '-thumb')]:
 
 然后在 `_data/publications.yml` 里写 `preview: xxx.webp` 和 `preview_thumb: xxx-thumb.webp`。
 （偷懒也可以只放一张图、只写 `preview:`，页面能正常显示，只是加载会慢。）
+卡片里的缩略图会完整显示整张图（不裁切），所以直接用论文的 teaser / 方法总览图即可。
+
+## 字体
+
+正文 Inter、标题 Newsreader，字体文件放在 `assets/fonts/`（只含拉丁字符和用到的字重，两个文件共约 58KB，
+中文自动用系统字体）。**不要改回 Google Fonts 的 `<link>`**：它会阻塞整页渲染，国内访问时会一直白屏到请求超时。
+
+想换字体：把新的 `.woff2` 放进 `assets/fonts/`，然后改 `assets/css/main.css` 开头的 `@font-face`
+和 `_layouts/default.html` 里预加载标题字体的那行 `preload`。
 
 ## 本地预览
 
