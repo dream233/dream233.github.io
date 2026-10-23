@@ -3,14 +3,17 @@
 # text 支持 Markdown 语法（链接、加粗等）
 # ============================================================
 
+- date: 2026-10-20
+  text: "Released [StopLoss](https://github.com/TIGER-AI-Lab/StopLoss), a small monitor that learns from finished runs to predict when a coding agent is about to fail, so doomed runs can be stopped early. Read the [paper](https://arxiv.org/abs/2610.25525), browse the [project page](https://tiger-ai-lab.github.io/StopLoss/), or grab the [models and training data](https://huggingface.co/collections/TIGER-Lab/stoploss)."
+
 - date: 2026-07-14
-  text: "Released [FIM-Midtraining](https://github.com/TIGER-AI-Lab/FIM-Midtraining): Function-Aware Fill-in-the-Middle as Mid-Training for Coding Agent Foundation Models. Check out our [paper](https://arxiv.org/abs/2607.12463) and [huggingface collection](https://huggingface.co/collections/TIGER-Lab/fim-midtraining)!"
+  text: "New preprint: [FIM-Midtraining](https://github.com/TIGER-AI-Lab/FIM-Midtraining) mid-trains code LLMs to fill in masked functions, a task that mirrors how an agent calls a tool and uses the result, and lifts SWE-Bench-Verified by about 3 points. The [paper](https://arxiv.org/abs/2607.12463) is on arXiv, and the checkpoints and 2.6B-token corpus are on [Hugging Face](https://huggingface.co/collections/TIGER-Lab/fim-midtraining)."
 
 - date: 2026-04-07
-  text: "Released [SWE-Next](https://github.com/TIGER-AI-Lab/SWE-Next): Scalable Real-World Software Engineering Tasks for Agents. Check out our [paper](https://arxiv.org/abs/2603.20691), [project page](https://tiger-ai-lab.github.io/SWE-Next/), and [dataset](https://huggingface.co/datasets/TIGER-Lab/SWE-Next)!"
+  text: "[SWE-Next](https://github.com/TIGER-AI-Lab/SWE-Next) is out! It turns real merged GitHub pull requests into 2,308 self-verifying tasks for training software-engineering agents. See the [paper](https://arxiv.org/abs/2603.20691), the [project page](https://tiger-ai-lab.github.io/SWE-Next/), and the [dataset](https://huggingface.co/datasets/TIGER-Lab/SWE-Next)."
 
 - date: 2026-02-08
-  text: "Released [VisPhyWorld](https://github.com/TIGER-AI-Lab/VisPhyWorld): Probing Physical Reasoning via Code-Driven Video Reconstruction. Check out our [paper](https://arxiv.org/pdf/2602.13294) and [huggingface collection](https://huggingface.co/collections/TIGER-Lab/visphyworld)!"
+  text: "Introducing [VisPhyWorld](https://github.com/TIGER-AI-Lab/VisPhyWorld), which tests whether multimodal LLMs really understand physics by asking them to rebuild a video as runnable simulator code. The [paper](https://arxiv.org/abs/2602.13294) and [benchmark data](https://huggingface.co/collections/TIGER-Lab/visphyworld) are available now."
 
 - date: 2025-10-01
-  text: "Released [VisCoder2](https://tiger-ai-lab.github.io/VisCoder2/): building multi-language visualization coding agents. Check out our [paper](https://arxiv.org/abs/2510.23642) and [huggingface collection](https://hf.co/collections/TIGER-Lab/viscoder2)!"
+  text: "Our [VisCoder2](https://tiger-ai-lab.github.io/VisCoder2/) models (3B to 32B) write, run, and self-debug visualization code in 12 programming languages. Details are in the [paper](https://arxiv.org/abs/2510.23642); the models, the 679K-sample training set, and the VisPlotBench benchmark live in our [Hugging Face collection](https://hf.co/collections/TIGER-Lab/viscoder2)."

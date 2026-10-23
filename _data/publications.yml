@@ -17,6 +17,24 @@
 #   links        （可选）链接按钮列表，label 任意写，想加几个加几个
 # ============================================================
 
+- title: "StopLoss: Teaching Agents to Predict Failure and Stop Early"
+  authors: "Jiarong Liang, Xueguang Ma, Dongfu Jiang, Yuxuan Zhang, Ping Nie, Wenhu Chen"
+  year: 2026
+  venue: "arXiv"
+  venue_color: "#b31b1b"
+  venue_url: https://arxiv.org/abs/2610.25525
+  preview: stoploss.webp
+  preview_thumb: stoploss-thumb.webp
+  selected: true
+  links:
+    - { label: "arXiv", url: "https://arxiv.org/abs/2610.25525" }
+    - { label: "Website", url: "https://tiger-ai-lab.github.io/StopLoss/" }
+    - { label: "PDF", url: "https://arxiv.org/pdf/2610.25525" }
+    - { label: "Code", url: "https://github.com/TIGER-AI-Lab/StopLoss" }
+    - { label: "HuggingFace", url: "https://huggingface.co/collections/TIGER-Lab/stoploss" }
+    - { label: "𝕏 Thread", url: "https://x.com/JLiang51825/status/2112596382959939807" }
+    - { label: "LinkedIn", url: "https://www.linkedin.com/posts/jiarong-liang-b2a8a5239_aiagents-llm-machinelearning-share-7518364528502571008-LFmN/" }
+
 - title: "Function-Aware Fill-in-the-Middle as Mid-Training for Coding Agent Foundation Models"
   authors: "Yubo Wang*, Jiarong Liang*, Yuxuan Zhang, Xuye Liu, Cong Wei, Yuyu Zhang, Ping Nie, Wenhu Chen"
   year: 2026
