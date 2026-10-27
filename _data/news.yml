@@ -3,6 +3,9 @@
 # text 支持 Markdown 语法（链接、加粗等）
 # ============================================================
 
+- date: 2026-10-27
+  text: "Meet [ReGE](https://github.com/TIGER-AI-Lab/ReGE), which efficiently consolidates an agent's past attempts at a task into guidance that helps the same model do better on later attempts, letting GPT-5.6-Luna match GPT-5.6-Sol at only 28% of Sol's cost. Read the [paper](https://arxiv.org/abs/2610.33861) or visit the [project page](https://tiger-ai-lab.github.io/ReGE/)."
+
 - date: 2026-10-20
   text: "Released [StopLoss](https://github.com/TIGER-AI-Lab/StopLoss), a small monitor that learns from finished runs to predict when a coding agent is about to fail, so doomed runs can be stopped early. Read the [paper](https://arxiv.org/abs/2610.25525), browse the [project page](https://tiger-ai-lab.github.io/StopLoss/), or grab the [models and training data](https://huggingface.co/collections/TIGER-Lab/stoploss)."
 

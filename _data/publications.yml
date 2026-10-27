@@ -17,6 +17,23 @@
 #   links        （可选）链接按钮列表，label 任意写，想加几个加几个
 # ============================================================
 
+- title: "ReGE: Stronger Agents through Experience Synthesis"
+  authors: "Jiarong Liang, Yubo Wang, Zijie Liu, Yuxuan Zhang, Ping Nie, Wenhu Chen"
+  year: 2026
+  venue: "arXiv"
+  venue_color: "#b31b1b"
+  venue_url: https://arxiv.org/abs/2610.33861
+  preview: rege.webp
+  preview_thumb: rege-thumb.webp
+  selected: true
+  links:
+    - { label: "arXiv", url: "https://arxiv.org/abs/2610.33861" }
+    - { label: "Website", url: "https://tiger-ai-lab.github.io/ReGE/" }
+    - { label: "PDF", url: "https://arxiv.org/pdf/2610.33861" }
+    - { label: "Code", url: "https://github.com/TIGER-AI-Lab/ReGE" }
+    - { label: "𝕏 Thread", url: "https://x.com/JLiang51825/status/2115153311292915976" }
+    - { label: "LinkedIn", url: "https://www.linkedin.com/posts/jiarong-liang-b2a8a5239_aiagents-llm-machinelearning-share-7520920602505969665-a3mM/" }
+
 - title: "StopLoss: Teaching Agents to Predict Failure and Stop Early"
   authors: "Jiarong Liang, Xueguang Ma, Dongfu Jiang, Yuxuan Zhang, Ping Nie, Wenhu Chen"
   year: 2026
